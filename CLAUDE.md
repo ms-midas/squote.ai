@@ -3,10 +3,17 @@
 ## What This Is
 Marketing landing page for squote (voice-to-quote AI for UK tradespeople). Lives at `squote.ai`. The product app lives separately at `squote.app`.
 
+## Working Style
+- **Use agents extensively** — launch parallel agents for independent sections. Don't build sections sequentially when they can be built concurrently. For example, if building sections 3 and 4, spin up two agents in parallel — one for each section — then integrate the results.
+- **Speed is the priority** — the owner is tired of sitting at a computer. Get sections built fast, don't over-deliberate. Ship working code, iterate if needed.
+- **Don't ask unnecessary questions** — the spec PDF in `docs/` is comprehensive. Read it, follow it. Only ask if something is genuinely ambiguous.
+- **Batch changes** — don't push mid-session. Build locally, preview, then push when told.
+
 ## Tech Stack
 - **Pure HTML + CSS + vanilla JS** — no frameworks, no build step
 - **Single page**: `index.html` + `css/styles.css` + `js/main.js`
 - **Deployed on Vercel** as a static site
+- **Repo**: `github.com/ms-midas/squote.ai` (auto-deploys to Vercel on push to `main`)
 - **Font**: Inter (Google Fonts) — 400 body, 500 medium, 600 semi, 700 headings
 - **Images**: WebP preferred, JPG fallback. Hero images are in `assets/hero/`
 
