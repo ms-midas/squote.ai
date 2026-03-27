@@ -1,0 +1,45 @@
+/* squote.ai Landing Page — Brand Tokens */
+:root {
+  --terracotta: #C4572A;
+  --copper: #B87333;
+  --concrete: #8A8680;
+  --charcoal: #2B2926;
+  --plaster: #F5F0EA;
+  --white: #FFFFFF;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--charcoal);
+  background: var(--plaster);
+  line-height: 1.6;
+}
+
+/* Utility container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Build from here — see CLAUDE.md for phased approach */
