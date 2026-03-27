@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Preload critical assets -->
+  <link rel="preload" href="/assets/hero/hero-construction-sunrise.jpg" as="image" />
+
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css" />
 
@@ -28,18 +31,399 @@
   <meta name="theme-color" content="#F5F0EA" />
 </head>
 <body>
-  <!-- Sticky Header (appears after hero scroll) -->
+  <!-- Sticky Header -->
+  <header class="sticky-header" id="header">
+    <div class="container header-content">
+      <a href="/" class="logo">
+        <img src="/assets/logos/logo.svg" alt="squote" height="32" />
+      </a>
+      <nav class="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="header-cta">
+        <a href="https://squote.app" class="btn-text">Log in</a>
+        <a href="https://squote.app" class="btn-primary btn-small">Try 3 Quotes Free</a>
+      </div>
+    </div>
+  </header>
+
   <!-- Section 1: Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-background"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-headline">
+          Stop typing quotes at 10pm.<br/>
+          <span class="highlight">Just say the job.</span>
+        </h1>
+        <p class="hero-subheadline">
+          Record a 60-second voice note on site. AI builds your quote.<br/>
+          Send a professional PDF before you've left the drive.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://squote.app" class="btn-primary btn-large">Try 3 Quotes Free</a>
+          <p class="cta-note">No card needed · 3 free Pro-level quotes</p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <img src="/assets/logos/logo_terra_mic.svg" alt="Voice recording" class="mic-icon" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 2: Social Proof Strip -->
+  <section class="social-proof">
+    <div class="container">
+      <p class="social-proof-text">Trusted by 500+ tradespeople across the UK</p>
+      <div class="trade-badges">
+        <span class="badge">Electricians</span>
+        <span class="badge">Plumbers</span>
+        <span class="badge">Builders</span>
+        <span class="badge">Gas Engineers</span>
+        <span class="badge">Landscapers</span>
+        <span class="badge">Roofers</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 3: How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-headline">How it works</h2>
+      <p class="section-subheadline">From site to sent in under two minutes</p>
+
+      <div class="steps">
+        <div class="step animate-in">
+          <div class="step-visual">
+            <div class="step-circle">1</div>
+          </div>
+          <div class="step-content">
+            <h3>Record your voice</h3>
+            <p>Walk the job with your customer. Tap record. Say what needs doing — rooms, labour, materials, timing.</p>
+          </div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step animate-in">
+          <div class="step-visual">
+            <div class="step-circle">2</div>
+          </div>
+          <div class="step-content">
+            <h3>AI builds your quote</h3>
+            <p>squote transcribes your voice, structures the work into line items, and applies your saved labour rates and price list.</p>
+          </div>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step animate-in">
+          <div class="step-visual">
+            <div class="step-circle">3</div>
+          </div>
+          <div class="step-content">
+            <h3>Review and send</h3>
+            <p>Check it looks right. Tap send. Customer gets a branded PDF and an online page where they can accept in one tap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 4: The Problem -->
+  <section class="problem" id="problem">
+    <div class="problem-background"></div>
+    <div class="container problem-content">
+      <h2 class="section-headline-large">
+        You spend <span class="stat">33 hours a month</span><br/>
+        writing quotes you could've said in 60 seconds.
+      </h2>
+      <div class="pain-points">
+        <div class="pain-point animate-in">
+          <p>You're good at the work. The paperwork is killing your evenings.</p>
+        </div>
+        <div class="pain-point animate-in">
+          <p>By the time you've typed it up, another tradesperson has already sent theirs.</p>
+        </div>
+        <div class="pain-point animate-in">
+          <p>Customers want it fast. You want your time back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 5: Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-headline">Everything you need to quote, manage, and get paid</h2>
+
+      <div class="feature-groups">
+        <div class="feature-group animate-in">
+          <h3 class="group-title">QUOTE</h3>
+          <ul class="feature-list">
+            <li>Voice-to-quote AI (60-minute recordings)</li>
+            <li>Your own price list and labour rates</li>
+            <li>Line-by-line cost, markup, and profit breakdown</li>
+            <li>Professional PDF with your branding</li>
+            <li>Quote expiry dates and auto-reminders</li>
+          </ul>
+        </div>
+
+        <div class="feature-group animate-in">
+          <h3 class="group-title">MANAGE</h3>
+          <ul class="feature-list">
+            <li>Customer database with quote history</li>
+            <li>Email quotes direct from squote</li>
+            <li>Online customer portal (accept/decline in one tap)</li>
+            <li>Job tracking from quote to completion</li>
+            <li>Photo upload and site notes</li>
+          </ul>
+        </div>
+
+        <div class="feature-group animate-in">
+          <h3 class="group-title">GROW</h3>
+          <ul class="feature-list">
+            <li>Convert quotes to invoices instantly</li>
+            <li>Track unpaid/paid/overdue invoices</li>
+            <li>Staged payment schedules (deposit, progress, final)</li>
+            <li>Quote analytics and win rates</li>
+            <li>RAMS generation (Master plan)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 6: Testimonial -->
+  <section class="testimonial">
+    <div class="container">
+      <blockquote class="quote animate-in">
+        <p class="quote-text">"Honestly, I don't know how I quoted before squote. I'm sending quotes while the customer's still talking. They love it."</p>
+        <footer class="quote-author">
+          <strong>James T.</strong> · Electrician · Manchester
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
   <!-- Section 7: Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-headline">Simple pricing. No surprises.</h2>
+      <p class="section-subheadline">All plans include unlimited quotes</p>
+
+      <div class="billing-toggle">
+        <span class="toggle-label">Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="billing-toggle" />
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Annual <span class="save-badge">Save 2 months</span></span>
+      </div>
+
+      <div class="pricing-cards">
+        <div class="pricing-card animate-in">
+          <h3 class="plan-name">Free</h3>
+          <div class="plan-price">
+            <span class="price">£0</span>
+            <span class="period">/month</span>
+          </div>
+          <p class="plan-description">Try the manual builder</p>
+          <ul class="plan-features">
+            <li>Manual quote builder</li>
+            <li>3 quotes per month</li>
+            <li>PDF download</li>
+            <li>Your branding</li>
+          </ul>
+          <a href="https://squote.app" class="btn-secondary">Start Free</a>
+        </div>
+
+        <div class="pricing-card animate-in">
+          <h3 class="plan-name">Core</h3>
+          <div class="plan-price">
+            <span class="price monthly-price">£29</span>
+            <span class="price annual-price" style="display:none;">£290</span>
+            <span class="period monthly-period">/month</span>
+            <span class="period annual-period" style="display:none;">/year</span>
+          </div>
+          <p class="plan-description">Voice-to-quote AI</p>
+          <ul class="plan-features">
+            <li>Everything in Free</li>
+            <li>Voice recording + AI quoting</li>
+            <li>Unlimited quotes</li>
+            <li>Your price list integration</li>
+            <li>Labour rate calculations</li>
+          </ul>
+          <a href="https://squote.app?plan=core" class="btn-secondary">Start Free</a>
+        </div>
+
+        <div class="pricing-card featured animate-in">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h3 class="plan-name">Pro</h3>
+          <div class="plan-price">
+            <span class="price monthly-price">£39</span>
+            <span class="price annual-price" style="display:none;">£390</span>
+            <span class="period monthly-period">/month</span>
+            <span class="period annual-period" style="display:none;">/year</span>
+          </div>
+          <p class="plan-description">Full CRM + invoicing</p>
+          <ul class="plan-features">
+            <li>Everything in Core</li>
+            <li>Email quotes from squote</li>
+            <li>Online customer portal</li>
+            <li>Job tracking</li>
+            <li>Invoice generation</li>
+            <li>Photo upload</li>
+          </ul>
+          <a href="https://squote.app?plan=pro" class="btn-primary">Start Free</a>
+        </div>
+
+        <div class="pricing-card animate-in">
+          <h3 class="plan-name">Master</h3>
+          <div class="plan-price">
+            <span class="price monthly-price">£69</span>
+            <span class="price annual-price" style="display:none;">£690</span>
+            <span class="period monthly-period">/month</span>
+            <span class="period annual-period" style="display:none;">/year</span>
+          </div>
+          <p class="plan-description">Compliance + priority support</p>
+          <ul class="plan-features">
+            <li>Everything in Pro</li>
+            <li>RAMS generation</li>
+            <li>AI trade advisor (coming soon)</li>
+            <li>Priority support</li>
+            <li>120-min recordings</li>
+          </ul>
+          <a href="https://squote.app?plan=master" class="btn-secondary">Start Free</a>
+        </div>
+      </div>
+
+      <p class="pricing-note">First month £19 on all paid plans · 3 free Pro-level quotes to start</p>
+    </div>
+  </section>
+
   <!-- Section 8: Find Your Trade -->
+  <section class="find-your-trade" id="find-your-trade">
+    <div class="trade-backgrounds">
+      <div class="trade-bg active" data-trade="painter" style="background-image: url('/assets/hero/hero-painter-wall.jpg');"></div>
+      <div class="trade-bg" data-trade="electrician" style="background-image: url('/assets/hero/hero-electrician-lightning.jpg');"></div>
+      <div class="trade-bg" data-trade="plumber" style="background-image: url('/assets/hero/hero-plumber-copper.jpg');"></div>
+      <div class="trade-bg" data-trade="roofer" style="background-image: url('/assets/hero/hero-roofer-slates.jpg');"></div>
+      <div class="trade-bg" data-trade="landscaper" style="background-image: url('/assets/hero/hero-landscaper-garden.jpg');"></div>
+      <div class="trade-bg" data-trade="builder" style="background-image: url('/assets/hero/hero-construction-sunrise.jpg');"></div>
+    </div>
+    <div class="container trade-content">
+      <h2 class="section-headline">Built for your trade</h2>
+      <div class="trade-grid">
+        <button class="trade-card active" data-trade="painter">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 2L22 6L12 16L8 12L18 2Z"/>
+            <path d="M8 12L2 22H12L8 12Z"/>
+          </svg>
+          <span>Painters & Decorators</span>
+        </button>
+        <button class="trade-card" data-trade="electrician">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+          </svg>
+          <span>Electricians</span>
+        </button>
+        <button class="trade-card" data-trade="plumber">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <span>Plumbers</span>
+        </button>
+        <button class="trade-card" data-trade="roofer">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 20L12 4l9 16H3z"/>
+            <path d="M7 20v-6h10v6"/>
+          </svg>
+          <span>Roofers</span>
+        </button>
+        <button class="trade-card" data-trade="landscaper">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="5"/>
+            <path d="M12 13v8M8 17h8"/>
+          </svg>
+          <span>Landscapers</span>
+        </button>
+        <button class="trade-card" data-trade="builder">
+          <svg class="trade-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Builders</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 9: Trust Signals -->
+  <section class="trust-signals">
+    <div class="container">
+      <div class="signals">
+        <span class="signal">MOBILE-FIRST</span>
+        <span class="separator">·</span>
+        <span class="signal">GDPR COMPLIANT</span>
+        <span class="separator">·</span>
+        <span class="signal">UK DATA CENTRES</span>
+        <span class="separator">·</span>
+        <span class="signal">BUILT IN BRITAIN</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 10: Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2 class="final-headline">
+          Your first quote pays for itself.<br/>
+          <span class="highlight">Try it free.</span>
+        </h2>
+        <p class="final-subheadline">3 free Pro-level quotes. No card needed. Takes 60 seconds to start.</p>
+        <a href="https://squote.app" class="btn-primary btn-large">Try 3 Quotes Free</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="/assets/logos/logo.svg" alt="squote" height="32" />
+          <p class="footer-tagline">Quote fast. Win jobs. Get paid.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Product</h4>
+            <a href="https://squote.app">Sign up</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 squote.app — All rights reserved</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="/js/main.js"></script>
 </body>
