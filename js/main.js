@@ -12,13 +12,19 @@
 
 // Intersection Observer for scroll-triggered animations
 const observerOptions = {
-  threshold: 0.2,
-  rootMargin: '0px'
+  threshold: 0.15,
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
+      // Add staggered delay based on element index within parent
+      const parent = entry.target.parentElement;
+      const siblings = Array.from(parent.querySelectorAll('.animate-in'));
+      const index = siblings.indexOf(entry.target);
+      entry.target.style.transitionDelay = `${index * 100}ms`;
+      
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
@@ -29,13 +35,14 @@ document.querySelectorAll('.animate-in').forEach(el => {
   observer.observe(el);
 });
 
-// Sticky header show/hide
+// Sticky header show/hide with smooth behavior
 const header = document.getElementById('header');
 const hero = document.getElementById('hero');
 let lastScroll = 0;
+let ticking = false;
 
-window.addEventListener('scroll', () => {
-  const heroBottom = hero.offsetHeight;
+const updateHeader = () => {
+  const heroBottom = hero.offsetHeight * 0.5;
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > heroBottom) {
@@ -45,6 +52,14 @@ window.addEventListener('scroll', () => {
   }
 
   lastScroll = currentScroll;
+  ticking = false;
+};
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
 });
 
 // Parallax effect on hero and problem sections
@@ -174,3 +189,24 @@ const socialProof = document.querySelector('.social-proof');
 if (socialProof) {
   socialProofObserver.observe(socialProof);
 }
+
+// Add subtle tilt effect to cards on hover
+const cards = document.querySelectorAll('.pricing-card, .step, .feature-group');
+
+cards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 30;
+    const rotateY = (centerX - x) / 30;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
